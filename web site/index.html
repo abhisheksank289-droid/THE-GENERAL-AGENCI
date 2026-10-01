@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8f4">
+    <meta name="description" content="The General Agency, a neighborhood pharmacy established in 1930 and owned by Burli.">
+    <title>The General Agency | Pharmacy since 1930</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="heritage-bar">A neighborhood pharmacy, trusted since 1930</div>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="The General Agency home">
+            <span class="brand-mark" aria-hidden="true">+</span>
+            <span class="brand-name">The General Agency<span>PHARMACY &amp; EVERYDAY CARE</span></span>
+        </a>
+        <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Search products" autocomplete="off">
+            <span class="sr-only">Search products</span>
+        </label>
+        <button class="cart-trigger" id="open-cart" type="button" aria-controls="cart-panel" aria-expanded="false">
+            <span aria-hidden="true">▢</span> Cart <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> YOUR LOCAL HEALTH COUNTER</p>
+                <h1>Good care has<br>always been <em>close by.</em></h1>
+                <p class="hero-intro">Everyday essentials, thoughtful service, and a familiar face when you need one.</p>
+                <a class="primary-link" href="#products">Browse essentials <span aria-hidden="true">↘</span></a>
+                <p class="hero-note">Proudly serving our community since 1930</p>
+            </div>
+            <div class="hero-art" aria-label="Pharmacy care and wellness essentials" role="img">
+                <div class="art-circle art-circle-back"></div>
+                <div class="art-cross">+</div>
+                <div class="art-bottle"><span>DAILY<br>CARE</span></div>
+                <div class="art-pill art-pill-one"></div>
+                <div class="art-pill art-pill-two"></div>
+                <div class="art-stamp">1930<br><span>BURLI'S</span><br>PHARMACY</div>
+                <p class="art-caption">Care, close to home.</p>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Store details">
+            <p><span class="trust-icon">✳</span> Established <strong>1930</strong></p>
+            <p><span class="trust-icon">♙</span> Owned by <strong>Burli</strong></p>
+            <p><span class="trust-icon">⌂</span> Here for your everyday care</p>
+        </section>
+
+        <section class="shop-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A FEW EVERYDAY FAVORITES</p>
+                    <h2>Shop the essentials</h2>
+                </div>
+                <p class="section-aside">Sample listings · confirm stock and prices with the store.</p>
+            </div>
+            <div class="category-list" role="group" aria-label="Filter products by category">
+                <button class="category-filter is-active" type="button" data-category="all" aria-pressed="true">All products</button>
+                <button class="category-filter" type="button" data-category="wellness" aria-pressed="false">Wellness</button>
+                <button class="category-filter" type="button" data-category="first-aid" aria-pressed="false">First aid</button>
+                <button class="category-filter" type="button" data-category="devices" aria-pressed="false">Health devices</button>
+                <button class="category-filter" type="button" data-category="personal-care" aria-pressed="false">Personal care</button>
+            </div>
+            <div class="products" id="product-list" aria-live="polite"></div>
+            <p class="empty-results" id="empty-results" hidden>No products match that search. Try another name or category.</p>
+        </section>
+
+        <section class="story-section" id="our-story">
+            <div class="story-number">1930</div>
+            <div class="story-copy">
+                <p class="eyebrow">A LOCAL NAME, A LONG HISTORY</p>
+                <h2>Still here, still<br>looking out for you.</h2>
+                <p>The General Agency was established in 1930. Today, owner Burli carries on its neighborhood tradition of making everyday health and care essentials easy to find.</p>
+            </div>
+            <div class="story-seal" aria-label="Established in 1930, owned by Burli">
+                <span>EST.</span><strong>1930</strong><span>OWNER · BURLI</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">+</span><span class="brand-name">The General Agency<span>PHARMACY &amp; EVERYDAY CARE</span></span></a>
+        <p>Established 1930 · Owned by Burli</p>
+        <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+    <aside class="cart-panel" id="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+        <div class="cart-heading">
+            <div><p class="eyebrow">YOUR BASKET</p><h2 id="cart-title">Shopping cart</h2></div>
+            <button class="close-cart" id="close-cart" type="button" aria-label="Close cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <p class="cart-empty" id="cart-empty">Your cart is empty for now.</p>
+        <div class="cart-summary">
+            <p><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></p>
+            <small>Sample prices only. This demo cart does not place online orders.</small>
+            <button class="continue-shopping" id="continue-shopping" type="button">Continue shopping</button>
+        </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
